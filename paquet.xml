@@ -1,0 +1,23 @@
+<paquet
+    prefix="saisieautocompelete"
+    categorie="navigation"
+    version="1.0.0"
+    etat="dev"
+    compatibilite="[3.0.16;3.0.*]"
+    logo="prive/themes/spip/images/saisieautocompelete-64.png"
+    documentation=""
+    >
+
+  <nom>Saisie autocomplete</nom>
+
+  <auteur lien='http://p.henix.be'>Phenix</auteur>
+
+  <licence>GNU/GPL</licence>
+
+  <necessite nom="saisies" compatibilite="[1.21.0;]" />
+  <utilise nom="jqueryui" compatibilite="[1.8.21;]" />
+
+  <!-- activer jquery ui -->
+  <pipeline nom="jqueryui_plugins" inclure="saisieautocompelete_pipelines.php" />
+
+</paquet>

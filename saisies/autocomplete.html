@@ -1,0 +1,14 @@
+[(#REM) Saisie qui va s'autocompleter selon un fichier JSON fourni ]
+
+#INCLURE{fond=saisies/input, env, class=#ENV{class, autocomplete-#ENV{nom}}}
+
+<script type="text/javascript">
+
+ $(".autocomplete-#ENV{nom}").autocomplete({
+   source: function (request, response) {
+     $.getJSON("#ENV{json}", {arg: request['term'] }, function (json) {
+       response(json);
+     });
+   }
+ });
+</script>

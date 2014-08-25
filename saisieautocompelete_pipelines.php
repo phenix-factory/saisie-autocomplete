@@ -14,5 +14,6 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 // On va chercher l'autocomplete de jquery_UI
 function saisieautocompelete_jqueryui_plugins($scripts) {
     $scripts[] = "jquery.ui.autocomplete";
+    $scripts[] = "jquery.ui.autocomplete.html";
     return $scripts;
 }

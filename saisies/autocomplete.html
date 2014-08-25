@@ -9,7 +9,10 @@
      $.getJSON("#ENV{json}", {arg: request['term'] }, function (json) {
        response(json);
      });
-   }[,
+   },
+   html: true,
+   [,
    select: (#ENV*{select})]
+
  });
 </script>
